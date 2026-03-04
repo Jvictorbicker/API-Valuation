@@ -1,4 +1,4 @@
-<h1 align="center">STOCK VALUATION API</h1>
+<h1 align="LEFT">📊STOCK VALUATION API</h1>
 
 API REST desenvolvida com Spring Boot para calcular o valuation de ações da B3 utilizando dados da Brapi API.
 
