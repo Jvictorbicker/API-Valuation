@@ -4,7 +4,8 @@ public class Valuation {
     public double calculateFairPricePVP(double bookValue, double pvpFair) {
         return bookValue * pvpFair;
     }
-    public boolean areCheap(double precoAtual, double precoJusto) {
-        return precoAtual < precoJusto;
+
+    public boolean areCheap(double currentPrice, double fairPrice) {
+        return currentPrice < fairPrice;
     }
 }

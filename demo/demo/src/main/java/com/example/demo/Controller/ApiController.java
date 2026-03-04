@@ -1,7 +1,8 @@
 package com.example.demo.Controller;
 
 
-import com.example.demo.Service.ApiCall;
+import com.example.demo.Model.ValuationResponse;
+import com.example.demo.dto.ValuationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,10 +14,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController {
 
     @Autowired
-    private ApiCall apicall;
+    private ValuationService valuationService;
 
-    @GetMapping("/quote/{ticker}")
-    public String getQuote(@PathVariable String ticker) {
-        return apicall.ReadApi(ticker);
+    @GetMapping("/valuation/{ticker}")
+    public ValuationResponse getValuation(@PathVariable String ticker) {
+
+        return valuationService.calculate(ticker);
     }
 }
