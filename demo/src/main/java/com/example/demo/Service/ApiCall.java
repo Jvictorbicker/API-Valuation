@@ -28,6 +28,6 @@ public class ApiCall {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return "Error try again later!";
+        return null;
     }
 }
